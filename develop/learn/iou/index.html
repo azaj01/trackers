@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/logo-trackers-black.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -243,7 +243,7 @@
       data-md-component="logo"
     >
       
-  <img src="../../assets/logo-trackers-violet.svg" alt="logo">
+  <img src="../../assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
     </a>
 
@@ -272,7 +272,7 @@
             id="item-logo"
             >
             
-  <img src="../../assets/logo-trackers-violet.svg" alt="logo">
+  <img src="../../assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
             </a>
             
@@ -332,7 +332,7 @@
 
     <ul class="header-list">
         <li style="align-items: center;" id="resources-list">
-            <label for="dropdown-resources"><span>Resources <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/chevron-down.svg?v=2&token=a463935e93" style="height: 0.5rem;" /></span></label>
+            <label for="dropdown-resources"><span>Resources <svg class="dropdown-chevron" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
             <input type="radio" name="dropdown" id="dropdown-resources" style="display: none;" />
             <ul class="resources-sublist sublist">
                 <li><a href="https://blog.roboflow.com">Blog</a></li>
@@ -342,7 +342,7 @@
             </ul>
         </li>
         <li style="align-items: center;" id="products-list">
-            <label for="dropdown-products"><span>Docs <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/chevron-down.svg?v=2&token=a463935e93" style="height: 0.5rem;" /></span></label>
+            <label for="dropdown-products"><span>Docs <svg class="dropdown-chevron" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
             <input type="radio" name="dropdown" id="dropdown-products" style="display: none;" />
             <ul class="products-sublist sublist">
                 <li><a href="https://inference.roboflow.com">Inference</a></li>
@@ -353,6 +353,17 @@
             </ul>
         </li>
         <script>
+          const searchDialog = document.querySelector('.md-search[role="dialog"]');
+          if (searchDialog && !searchDialog.hasAttribute('aria-label')) {
+            searchDialog.setAttribute('aria-label', 'Search');
+          }
+          const versionButton = document.querySelector('.md-version__current');
+          if (versionButton) {
+            const version = versionButton.textContent.trim();
+            if (version) {
+              versionButton.setAttribute('aria-label', 'Select version ' + version);
+            }
+          }
           document.addEventListener('click', function(event) {
             const resourcesList = document.getElementById('resources-list');
             const productsList = document.getElementById('products-list');
@@ -423,7 +434,7 @@
             display: none;
           }
         </style>
-        <a href="https://github.com/roboflow/trackers"><li class="header-btn" style="border-radius: 5px; color: white; background: var(--md-typeset-a-color); padding-top: 0.25rem; padding-left: 0.5rem; padding-bottom: 0.25rem; padding-right: 0.5rem; border: 1px solid #8315F9;">Go to GitHub</li></a>
+        <li><a href="https://github.com/roboflow/trackers" class="header-btn" style="display: inline-flex; align-items: center; justify-content: center; border-radius: 5px; color: white; background: var(--md-typeset-a-color); padding: 0.25rem 0.5rem; border: 1px solid #8315F9;">Go to GitHub</a></li>
     </ul>
   </nav>
 
@@ -547,7 +558,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Trackers" class="md-nav__button md-logo" aria-label="Trackers" data-md-component="logo">
       
-  <img src="../../assets/logo-trackers-violet.svg" alt="logo">
+  <img src="../../assets/logo-trackers-violet.svg" alt="Trackers logo" width="218" height="198">
 
     </a>
     Trackers
@@ -752,6 +763,34 @@
     
   
     Track Objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamic-frame-rate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Frame Rate
   
 
     
@@ -1184,6 +1223,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" GIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.GIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1206,6 +1262,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" DIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.DIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1227,6 +1300,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label=" CIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.CIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1520,6 +1610,34 @@
     
   
     C-BIoU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trackers/mcbyte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    McByte
   
 
     
@@ -1978,6 +2096,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" GIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.GIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2000,6 +2135,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" DIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.DIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2021,6 +2173,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label=" CIoU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trackers.utils.iou.CIoU.normalize_for_fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;normalize_for_fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2691,9 +2860,11 @@ produce undefined output.</p>
 
         <p>Normalize similarity values for score fusion in BoT-SORT association.</p>
 <p>By default returns the matrix unchanged. Signed variants (GIoU, DIoU,
-CIoU) override this to shift <code>[-1, 1]</code> scores into <code>[0, 1]</code> via
-<code>(matrix + 1) / 2</code> so that score fusion preserves ranking for both
-overlapping and non-overlapping box pairs.</p>
+CIoU) override this to shift their scores into <code>[0, 1]</code> via
+<code>(matrix + 1) / 2</code> (clamped) so that scores are monotonically mapped
+within <code>[-1, 1]</code> and saturated to <code>0</code> below <code>-1</code>. The clamp is a
+no-op for GIoU and DIoU (floor exactly <code>-1</code>) but active for CIoU,
+whose aspect-ratio penalty can push raw scores below <code>-1</code>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2893,6 +3064,24 @@ True
 
 
 
+<div class="doc doc-object doc-function">
+
+
+<h3 id="trackers.utils.iou.GIoU.normalize_for_fusion" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">normalize_for_fusion</span><span class="p">(</span><span class="n">similarity_matrix</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Shift <code>[-1, 1]</code> GIoU scores into <code>[0, 1]</code> for BoT-SORT fusion.</p>
+
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -2965,6 +3154,24 @@ True
 
 
 
+<div class="doc doc-object doc-function">
+
+
+<h3 id="trackers.utils.iou.DIoU.normalize_for_fusion" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">normalize_for_fusion</span><span class="p">(</span><span class="n">similarity_matrix</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Shift <code>[-1, 1]</code> DIoU scores into <code>[0, 1]</code> for BoT-SORT fusion.</p>
+
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -2998,9 +3205,11 @@ The trade-off is weighted by <code>\alpha</code> that depends on IoU and <code>v
 matching :func:<code>torchvision.ops.complete_box_iou</code>.</p>
 <p><code>CIoU = DIoU - alpha * v</code>, with
 <code>alpha = v / (1 - IoU + v + epsilon)</code>.</p>
-<p>So <strong>CIoU ≤ DIoU ≤ IoU</strong> when widths and heights are positive.
-Scores are in <code>[-1, 1]</code>, matching the range of
-:func:<code>torchvision.ops.complete_box_iou</code>.</p>
+<p>So <strong>CIoU ≤ DIoU ≤ IoU</strong> when widths and heights are positive. Raw scores
+match :func:<code>torchvision.ops.complete_box_iou</code> exactly, with an upper bound
+of <code>1</code>; unlike GIoU and DIoU (which bottom out at <code>-1</code>), the aspect-ratio
+penalty can drive CIoU below <code>-1</code> (down to roughly <code>-1.5</code>). See
+:meth:<code>normalize_for_fusion</code>, which clamps after shifting into <code>[0, 1]</code>.</p>
 <p>Reference: https://arxiv.org/abs/1911.08287</p>
 
 
@@ -3037,6 +3246,26 @@ True
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="trackers.utils.iou.CIoU.normalize_for_fusion" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">normalize_for_fusion</span><span class="p">(</span><span class="n">similarity_matrix</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Shift and clamp CIoU scores into <code>[0, 1]</code> for BoT-SORT fusion.</p>
+<p>CIoU can fall below <code>-1</code> (see class docstring), so the clamp inside
+:func:<code>_shift_signed_to_unit_range</code> is non-trivial here.</p>
+
+
+    </div>
+
+</div>
 
 
 
@@ -3406,13 +3635,11 @@ larger values tolerate wider localization gaps.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.tracking", "navigation.expand", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../javascripts/pycon_copy.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
       
         <script src="../../javascripts/cli_builder_framework.js"></script>
       
